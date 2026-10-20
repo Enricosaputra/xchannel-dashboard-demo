@@ -10,15 +10,15 @@
             <tr>
                 <td class="px-4 py-3">
                     <span class="block font-medium">{{ $show->title }}</span>
-                    @if ($show->description) <span class="block text-xs text-slate-500">{{ \Illuminate\Support\Str::limit($show->description, 90) }}</span> @endif
+                    @if ($show->description) <span class="block text-xs text-ink-500">{{ \Illuminate\Support\Str::limit($show->description, 90) }}</span> @endif
                 </td>
-                <td class="px-4 py-3 text-slate-600">{{ $show->hostNames() ?: '-' }}</td>
-                <td class="px-4 py-3 text-slate-600">
+                <td class="px-4 py-3 text-ink-600">{{ $show->hostNames() ?: '-' }}</td>
+                <td class="px-4 py-3 text-ink-600">
                     @if ($show->slots->isEmpty())
-                        <span class="text-slate-400">{{ __('not scheduled') }}</span>
+                        <span class="text-ink-400">{{ __('not scheduled') }}</span>
                     @else
                         {{ trans_choice(':count slot|:count slots', $show->slots->count()) }}
-                        <span class="block text-xs text-slate-500">{{ $show->slots->pluck('station.city')->unique()->sort()->implode(', ') }}</span>
+                        <span class="block text-xs text-ink-500">{{ $show->slots->pluck('station.city')->unique()->sort()->implode(', ') }}</span>
                     @endif
                 </td>
                 <td class="px-4 py-3"><x-active-badge :active="$show->is_active" /></td>

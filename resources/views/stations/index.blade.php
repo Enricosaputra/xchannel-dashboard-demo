@@ -8,9 +8,9 @@
             <tr>
                 <td class="px-4 py-3">
                     <a href="{{ route('stations.show', $station) }}" class="block font-medium hover:underline">{{ $station->name }}</a>
-                    <span class="block text-xs text-slate-500">{{ $station->frequency }}</span>
+                    <span class="block text-xs text-ink-500">{{ $station->frequency }}</span>
                 </td>
-                <td class="px-4 py-3 text-slate-600">{{ $station->city }}</td>
+                <td class="px-4 py-3 text-ink-600">{{ $station->city }}</td>
                 <td class="px-4 py-3"><x-stream-badge :status="$station->stream_status" /></td>
                 <td class="px-4 py-3 text-right tabular-nums">{{ $station->slots_count }}</td>
                 <td class="px-4 py-3"><x-active-badge :active="$station->is_active" /></td>

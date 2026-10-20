@@ -9,7 +9,7 @@
         @forelse ($hosts as $host)
             <tr>
                 <td class="px-4 py-3 font-medium">{{ $host->name }}</td>
-                <td class="px-4 py-3 text-slate-600">{{ $host->shows->pluck('title')->implode(', ') ?: '-' }}</td>
+                <td class="px-4 py-3 text-ink-600">{{ $host->shows->pluck('title')->implode(', ') ?: '-' }}</td>
                 <td class="px-4 py-3 text-right tabular-nums">{{ \App\Support\Clock::hours($minutes[$host->name] ?? 0) }}</td>
                 <td class="px-4 py-3"><x-active-badge :active="$host->is_active" /></td>
                 <td class="px-4 py-3">
