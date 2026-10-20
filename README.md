@@ -1,8 +1,9 @@
 # XChannel dashboard demo
 
 The radio part of the admin dashboard of a media app I worked on. XChannel runs local radio stations in several
-cities (Jakarta, Bogor, Banten, Bandung, Surabaya, Solo); the app streams them and shows what is on. The dashboard is
+cities (eight today, from Jakarta to Malang); the app streams them and shows what is on. The dashboard is
 where the team manages the stations, the shows, the hosts and each station's week of programmes.
+The public side is at https://xchannel.id/radio.
 
 Production is a **Laravel** dashboard on **MySQL**; the app reads the same tables through its API. My part was the dashboard,
 so this repo rebuilds the radio section of it, on the same stack, with made-up data. Podcasts, the music chart,
